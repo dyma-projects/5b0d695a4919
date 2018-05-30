@@ -1,0 +1,14 @@
+<!-- Trois exemples de liaisons -->
+<input [type]="type" (click)="showConsole()" [(ngModel)]="text">
+<p>{{ text }}</p>
+
+<!-- Affichage de P1 ou P2 -->
+<p *ngIf="status">P1</p>
+<p *ngIf="!status">P2</p>
+
+<button type="button" (click)="status = !status">Mon bouton</button>
+
+<!-- Affichage du tableau texts -->
+<ul>
+  <li *ngFor="let text of texts">{{ text }}</li>
+</ul>
